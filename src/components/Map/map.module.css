@@ -1,0 +1,43 @@
+.map {
+    --full: 100%;
+    height: var(--full);
+    width: var(--full);
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+}
+
+.map:focus-within {
+    border: 1px solid rgba(var(--secondary), 1);
+}
+
+:global(.mapboxgl-canvas:focus) {
+    outline: none;
+}
+
+.marker {
+    background: white;
+    border-radius: var(--radius);
+    padding: var(--unit);
+    box-shadow: 1px 0 10px 0 var(--gray-2);
+    z-index: initial;
+}
+
+.marker:hover {
+    z-index: 20 !important;
+}
+
+.name {
+    font-weight: bolder;
+    font-size: calc(var(--unit) * 2);
+}
+
+
+.meta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1000ms ease-in-out;
+}
+
+.marker:hover .meta {
+    max-height: 500px;
+}

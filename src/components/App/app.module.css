@@ -1,0 +1,29 @@
+.container {
+    height: 100vh;
+    padding: calc(var(--unit) * 4);
+    display: grid;
+    grid-gap: calc(var(--unit) * 2);
+    grid-template:
+        "header search" auto
+        "map    map"    1fr /
+        1fr     1fr;
+}
+
+.header {
+    grid-area: header;
+}
+
+.header h1 {
+    margin: 0;
+    color: rgba(var(--primary));
+}
+
+.search {
+    grid-area: search;
+    align-self: center;
+}
+
+.map {
+    grid-area: map;
+}
+

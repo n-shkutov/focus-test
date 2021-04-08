@@ -1,0 +1,21 @@
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "components": "./src/components",
+          "store": "./src/store",
+          "services": "./src/services",
+          "styles": "./src/styles"
+        }
+      }
+    ],
+    "@reatom/babel-plugin"
+  ],
+  "presets": [
+    [
+      "@babel/preset-react"
+    ]
+  ]
+}
